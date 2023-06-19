@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
     final data = await json.decode(response);
 
     setState(() {
-      notifications = data['notifications']
+      notifications = data['notification']
           .map((data) => InstagramNotification.fromJson(data))
           .toList();
     });
